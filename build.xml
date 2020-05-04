@@ -8,8 +8,8 @@
 	  </fileset>
 	</path>
 	<path id="xslt.classpath">
-        <fileset dir="apache-jmeter-4.0\lib" includes="xalan*.jar"/>
-        <fileset dir="apache-jmeter-4.0\lib" includes="serializer*.jar"/>
+        <fileset dir="${jmeter.home}\lib" includes="xalan*.jar"/>
+        <fileset dir="${jmeter.home}\lib" includes="serializer*.jar"/>
     </path>
 	<taskdef
     name="jmeter"
@@ -44,7 +44,7 @@
        basedir="results/jtl"
        destdir="results/html"
        includes="*.jtl"
-       style="jmeter-results-detail-report_21-load.xsl"/>
+       style="${basedir}/jmeter-results-detail-report_21-load.xsl"/>
 	</target>
 	<target name="all" depends="test, report"/>
 </project>
