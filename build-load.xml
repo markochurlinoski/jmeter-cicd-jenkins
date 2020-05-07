@@ -28,7 +28,7 @@
 		<jmeter
        jmeterhome="${jmeter.home}"
        resultlogdir="results/jtl">
-			<testplans dir="${basedir}/tests" includes="APITestingSF.jmx"/>
+			<testplans dir="${basedir}/tests/load" includes="APITestingSF.jmx"/>
 			<property name="jmeter.save.saveservice.output_format" value="xml"/>
 			<jvmarg value="-Xmx1536m"/>
 			<property name="users" value="${users}"/>
