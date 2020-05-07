@@ -30,14 +30,13 @@
        which can be saved usin jenkins's archive artifact feature -->
 	<target name="report" depends="test">
 		<xslt
-		classpathref="xslt.classpath"
        basedir="results/jtl"
        destdir="results/html"
        includes="*.jtl"
-       style="jmeter-results-detail-report_21.xsl"/>
+       style="${basedir}\jmeter-results-detail-report_21.xsl"/>
 	</target>
 	<target name="unit" depends="test">
     <xslt basedir="results/jtl" destdir="results/unit" includes="*.jtl" extension=".xml" style="${basedir}\jmeterUnitReport.xsl" />
-	</target>
-	<target name="all" depends="test, report"/>
+</target>
+	<target name="all" depends="test, report, unit"/>
 </project>
