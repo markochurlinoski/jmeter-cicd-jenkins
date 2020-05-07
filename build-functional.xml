@@ -38,5 +38,6 @@
 	</target>
 	<target name="unit" depends="test">
     <xslt basedir="results/jtl" destdir="results/unit" includes="*.jtl" extension=".xml" style="${basedir}\jmeterUnitReport.xsl" />
+	</target>
 	<target name="all" depends="test, report"/>
 </project>
